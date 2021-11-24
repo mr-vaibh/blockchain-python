@@ -39,6 +39,9 @@ class Blockchain:
         newBlock.mine(2) # find a hash for new block
         self.chain.append(newBlock)
     
+    def getLatestBlock(self):
+        return self.chain[-1]
+    
     def isValid(self):
         for i in range(1, len(self.chain)):
             currentBlock = self.chain[i]
